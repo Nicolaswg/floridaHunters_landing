@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { buttonVariants } from '../ui/button';
 
 
 const Header = () => {
@@ -12,21 +12,21 @@ const Header = () => {
             <div className="flex gap-2 space-x-4">
 
               <div>
-                <a href="#" className="flex items-center py-5 px-2 text-gray-700">
+                <a href="/" className="flex items-center py-5 px-2 text-gray-700">
                   <div className="w-20 h-20 bg-cover bg-center bg-[url('/Logo.jpeg')]" />
                   <span className="font-bold hover:text-white ease-in-out duration-300 text-2xl hover:">Florida Hounters</span>
                 </a>
               </div>
 
               <div className="hidden md:flex items-center space-x-1">
-                <a href="#" className="sm:truncate py-5 px-3 text-white hover:text-[#94F7F6] ease-in-out duration-300">Schedule a Meeting</a>
-                <a href="#" className="sm:truncate py-5 px-3 text-white hover:text-[#94F7F6] ease-in-out duration-300">Pricing</a>
+                <a href="/" className={`sm:truncate lg:text-lg text-base py-5 px-3 text-white hover:text-[#94F7F6] ease-in-out duration-300 ${buttonVariants({ variant: 'link' })}`}>Schedule a Meeting</a>
+                <a href="/" className={`sm:truncate lg:text-lg text-base py-5 px-3 text-white hover:text-[#94F7F6] ease-in-out duration-300 ${buttonVariants({ variant: 'link' })}`}>Pricing</a>
               </div>
             </div>
 
             <div className="hidden md:flex items-center space-x-1">
-              <a href="" className="py-5 px-3 hover:text-[#94F7F6] ease-in-out duration-300">Login</a>
-              <a href="" className="py-2 px-3 bg-white hover:bg-[#9cfe02] text-black rounded transition delay-150 duration-300 hover:-translate-y-1 hover:scale-110">Signup</a>
+              <a href="/" className="py-5 px-3 hover:text-[#94F7F6] ease-in-out duration-300">Login</a>
+              <a href="/" className="py-2 px-3 bg-white hover:bg-[#9cfe02] text-black rounded transition delay-150 duration-300 hover:-translate-y-1 hover:scale-110">Signup</a>
             </div>
 
             <div className="md:hidden flex items-center">
