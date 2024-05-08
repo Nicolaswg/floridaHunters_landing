@@ -5,16 +5,14 @@ import { buttonVariants } from '../ui/button';
 const Header = () => {
   return (
     <header>
-      <nav className="bg-black text-white lg:text-lg">
+      <nav className="bg-[#2B2C2D] text-white lg:text-lg">
         <div className=" px-4 w-full">
           <div className="flex items-center justify-between">
-
             <div className="flex gap-2 space-x-4">
 
               <div>
-                <a href="/" className="flex items-center py-5 px-2 text-gray-700">
-                  <div className="w-20 h-20 bg-cover bg-center bg-[url('/Logo.jpeg')]" />
-                  <span className="font-bold hover:text-white ease-in-out duration-300 text-2xl hover:">Florida Hounters</span>
+                <a href="/" className="flex items-center py-5 px-2 text-white font-bebas cursor-">
+                  <h4 className="font-bold  ease-in-out duration-500 text-2xl hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#94F7F6] via-[#97F9A5] to-[#9CFE02]">Florida Hounters</h4>
                 </a>
               </div>
 
