@@ -7,13 +7,12 @@ interface PricingProps {
   subTitle: string
   features: string[]
   price: number
-
 }
 
 export const Pricing = ({ title, subTitle, features, price }: PricingProps) => {
   return (
-    <div className="max-w-xs mx-auto m-2 overflow-hidden bg-white rounded-lg shadow-lg">
-      <div className="px-6 py-4 bg-gradient-to-r from-[#94F7F6] via-[#97F9A5] to-[#9CFE02] h-[140px]">
+    <div className="max-w-xs mx-auto m-2 scale-130 overflow-hidden bg-white rounded-lg shadow-lg">
+      <div className="px-6 py-4 h-[150px]">
         <h2 className="text-2xl font-semibold text-gray-800">{title}</h2>
         <p className="text-gray-600">{subTitle}</p>
       </div>
@@ -28,7 +27,7 @@ export const Pricing = ({ title, subTitle, features, price }: PricingProps) => {
             <li key={id} className="flex items-center">
               <svg className="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
               {feature}
             </li>
@@ -38,8 +37,7 @@ export const Pricing = ({ title, subTitle, features, price }: PricingProps) => {
       <div className="px-6 pt-4 pb-6">
 
         <Button
-          className="block w-full px-4 py-2 font-semibold text-center text-white rounded">Get
-          Started</Button>
+          className="block w-full px-4 py-2 font-semibold text-center text-white rounded">Take a trial</Button>
       </div>
     </div>
   )
