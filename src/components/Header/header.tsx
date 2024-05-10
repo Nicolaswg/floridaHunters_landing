@@ -1,4 +1,3 @@
-import React from 'react'
 import { buttonVariants } from '../ui/button';
 
 
@@ -11,14 +10,14 @@ const Header = () => {
             <div className="flex w-full justify-between gap-2 space-x-4">
 
               <div className='flex justify-center items-center gap-x-1'>
-                <img src="../../../public/logo2.png" alt="logo" width={90} />
-                <a href="/" className="flex items-center py-5 px-2 text-white font-bebas">
+                <img src="/logo2.png" alt="logo" width={90} className='scale-150' />
+                <a href="/" className="flex ml-4 items-center py-5 px-2 text-white font-bebas">
                   <h4 className="font-bold  ease-in-out duration-500 text-3xl hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#94F7F6] via-[#97F9A5] to-[#9CFE02]">Florida Hounters</h4>
                 </a>
               </div>
 
               <div className="hidden md:flex items-center space-x-1">
-                <a href="/" className={`flex gap-x-2 sm:truncate lg:text-lg text-base py-5 px-3 text-white hover:text-[#94F7F6] ease-in-out duration-300 ${buttonVariants({ variant: 'link' })}`}>
+                <a href="/" className={`flex gap-x-2 sm:text-[18px] sm:truncate lg:text-lg text-base py-5 px-3 text-white hover:text-[#94F7F6] ease-in-out duration-300 ${buttonVariants({ variant: 'link' })}`}>
                   <span>Schedule a Meeting</span>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
