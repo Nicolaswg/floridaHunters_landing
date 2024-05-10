@@ -4,7 +4,7 @@ import { buttonVariants } from '../ui/button';
 
 const Header = () => {
   return (
-    <header className='fixed top-0 w-full'>
+    <header className='fixed top-0 w-full z-10'>
       <nav className=" text-white lg:text-lg p-3">
         <div className=" px-4 w-full">
           <div className="flex items-center justify-between">

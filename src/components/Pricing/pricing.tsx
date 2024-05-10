@@ -11,7 +11,7 @@ interface PricingProps {
 
 export const Pricing = ({ title, subTitle, features, price }: PricingProps) => {
   return (
-    <div className="max-w-xs mx-auto m-2 scale-130 overflow-hidden bg-white rounded-lg shadow-lg">
+    <div className="max-w-xs mx-auto m-2 overflow-hidden bg-white rounded-lg shadow-lg">
       <div className="px-6 py-4 h-[150px]">
         <h2 className="text-2xl font-semibold text-gray-800">{title}</h2>
         <p className="text-gray-600">{subTitle}</p>
