@@ -39,7 +39,7 @@ export const EmailForm = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "noreply@resend.dev",
+          from: "Support <no-reply@floridahuntersacademy.com>",
           to: email,
           subject: `Hi! ${name}`,
           text: plainText,
