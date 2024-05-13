@@ -27,7 +27,10 @@ export const EmailForm = () => {
 
     const plainText = render(
       <EmailTemplate
-        username={name.toString()} />,
+        username={name.toString()}
+        company="Florida Hunters Academy"
+        companyEmail="floridahunters" />,
+
       {
         plainText: true
       })
@@ -53,7 +56,7 @@ export const EmailForm = () => {
     }
   }
   return (
-    <form onSubmit={handleSubmit} className="p-2 flex flex-col gap-2 sm:items-center sm:flex-row sm:gap-3 md:justify-center">
+    <form onSubmit={handleSubmit} className="p-2 flex gap-2 items-center md:flex-wrap lg:flex-row lg:gap-3 md:justify-center">
       <div className="w-full max-w-lg  lg:w-auto">
         <Label className="sr-only">Name</Label>
         <Input required placeholder="Name" type="text" name="name" />
