@@ -1,14 +1,17 @@
 
 import { render } from "@react-email/render";
+import { useRef } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 import { EmailTemplate } from "@/components/template/EmailTemplate";
-
+import toastify from "@/logic/tostify";
 
 export const EmailForm = () => {
+  const nameInputRef = useRef<HTMLInputElement>(null);
+  const emailInputRef = useRef<HTMLInputElement>(null);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -18,7 +21,7 @@ export const EmailForm = () => {
 
     const emailHTML = render(
       <EmailTemplate
-        userName="Daniel"
+        userName={name.toString()}
         company="Florida Hunters Academy"
         companyEmail="floridahuntersbaseball@gmail.com"
         location={{ state: "FL", street: "2231 Fortune Rd", city: "Kissimmee", postalCode: "34744" }}
@@ -46,7 +49,7 @@ export const EmailForm = () => {
 
     const plainText = render(
       <EmailTemplate
-        userName="Daniel"
+        userName={name.toString()}
         company="Florida Hunters Academy"
         companyEmail="floridahuntersbaseball@gmail.com"
         location={{ state: "FL", street: "2231 Fortune Rd", city: "Kissimmee", postalCode: "34744" }}
@@ -86,6 +89,9 @@ export const EmailForm = () => {
         }),
       })
       const data = await res.json()
+      toastify(`An email has been sent to: ${email}`, "success")
+      nameInputRef.current.value = "";
+      emailInputRef.current.value = "";
       console.log(data)
     } catch (error) {
       console.log(error)
@@ -95,11 +101,11 @@ export const EmailForm = () => {
     <form onSubmit={handleSubmit} className="p-2 flex gap-2 items-center md:flex-wrap lg:flex-row lg:gap-3 md:justify-center">
       <div className="w-full max-w-lg  lg:w-auto">
         <Label className="sr-only">Name</Label>
-        <Input required placeholder="Name" type="text" name="name" />
+        <Input required placeholder="Name" type="text" name="name" ref={nameInputRef} />
       </div>
       <div className="w-full max-w-lg  lg:w-auto">
         <Label className="sr-only">Email</Label>
-        <Input required placeholder="Email" type="name" name="email" />
+        <Input required placeholder="Email" type="name" name="email" ref={emailInputRef} />
       </div>
       <Button className="w-min">Get in Touch</Button>
     </form>
