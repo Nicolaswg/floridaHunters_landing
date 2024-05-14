@@ -86,7 +86,7 @@ export const EmailForm = () => {
         }),
       })
       const data = await res.json()
-      console.log(typeof name)
+      console.log(data)
     } catch (error) {
       console.log(error)
     }
