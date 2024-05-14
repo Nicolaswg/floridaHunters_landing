@@ -18,7 +18,26 @@ export const EmailForm = () => {
 
     const emailHTML = render(
       <EmailTemplate
-        username={name.toString()}
+        userName="Daniel"
+        company="Florida Hunters Academy"
+        companyEmail="floridahuntersbaseball@gmail.com"
+        location={{ state: "FL", street: "2231 Fortune Rd", city: "Kissimmee", postalCode: "34744" }}
+        values={[
+          {
+            id: 1,
+            title: "Coaching: ",
+            content: "Our team of experienced coaches are not only skilled in the technical aspects of the game, but also passionate about working with children."
+          },
+          {
+            id: 2,
+            title: "Training Sessions: ",
+            content: "Our structured training sessions focus on enhancing fundamental skills such as batting, pitching, fielding, base running, and overall game strategy."
+          },
+          {
+            id: 3,
+            title: "Age Groups: ",
+            content: "We offer groups and individual programs for children aged 9U-13U. Each group is carefully designed to cater to specific developmental needs and challenges."
+          }]}
       />,
       {
         pretty: true
@@ -27,10 +46,27 @@ export const EmailForm = () => {
 
     const plainText = render(
       <EmailTemplate
-        username={name.toString()}
+        userName="Daniel"
         company="Florida Hunters Academy"
-        companyEmail="floridahunters" />,
-
+        companyEmail="floridahuntersbaseball@gmail.com"
+        location={{ state: "FL", street: "2231 Fortune Rd", city: "Kissimmee", postalCode: "34744" }}
+        values={[
+          {
+            id: 1,
+            title: "Coaching: ",
+            content: "Our team of experienced coaches are not only skilled in the technical aspects of the game, but also passionate about working with children."
+          },
+          {
+            id: 2,
+            title: "Training Sessions: ",
+            content: "Our structured training sessions focus on enhancing fundamental skills such as batting, pitching, fielding, base running, and overall game strategy."
+          },
+          {
+            id: 3,
+            title: "Age Groups: ",
+            content: "We offer groups and individual programs for children aged 9U-13U. Each group is carefully designed to cater to specific developmental needs and challenges."
+          }]}
+      />,
       {
         plainText: true
       })
