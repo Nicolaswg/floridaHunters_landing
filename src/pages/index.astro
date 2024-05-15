@@ -3,8 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import "@/styles/globals.css";
 import Hero from "@/components/Hero/Hero";
 import "react-toastify/dist/ReactToastify.css";
+import Info from "@/components/Sections/Info.astro";
+import HoursBanner from "@/components/Sections/HoursBanner.astro";
 ---
 
 <Layout title="Floridahunters">
   <Hero client:load />
+  <HoursBanner />
+  <Info />
 </Layout>

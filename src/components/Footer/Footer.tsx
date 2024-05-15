@@ -13,26 +13,15 @@ export const Footer = ({ description, socialLinks, companyDetails }: FooterProps
   return (
     <footer>
       <div className="bg-gray-800 py-4 text-gray-400">
-        <div className="container px-4 mx-auto">
-          <div className="-mx-4 flex flex-wrap justify-between">
-            <div className="px-4 my-4 w-full xl:w-1/5">
-              <img src="/logo3.png" alt="florida hunters logo" width={100} height={100} className='m-4' />
-              <p className="text-justify">
+        <div className="container px-6 py-8 mx-auto">
+          <div className="-mx-4 grid grid-cols-3 gap-8">
+            <div className="col-span-2 flex flex-row ">
+              {/* <img src="/logo3.webp" alt="florida hunters logo" className='m-4' />
+              <p className="text-justify w-[80ch]">
                 {description}
-              </p>
+              </p> */}
             </div>
-
-            <div className="px-4 my-4 w-full sm:w-auto">
-              <div>
-                <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-green-600">Company</h2>
-              </div>
-              <ul className="leading-8">
-                <li><a href="#" className="hover:text-white">Terms &amp; Conditions</a></li>
-                <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
-                <li><a href="tel:+1(786)836-8901" className="hover:text-white">Contact Us</a></li>
-              </ul>
-            </div>
-            <div className="px-4 my-4 w-full sm:w-auto xl:w-1/5">
+            <div className="">
               <div>
                 <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-green-600">Connect With Us</h2>
               </div>

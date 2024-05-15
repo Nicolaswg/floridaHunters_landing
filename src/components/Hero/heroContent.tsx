@@ -4,7 +4,7 @@ import { EmailForm } from '@/components/Email/EmailForm';
 
 export const HeroContent = () => {
   return (
-    <div className="w-full h-full p-8 bg-[url(/hero_bg.jpg)] bg-cover bg-center bg-no-repeat lg:bg-top lg:py-32 flex items-center justify-center mix-blend-overlay">
+    <div className="w-full h-full p-8 bg-[url(/hero_bg.webp)] bg-cover bg-center bg-no-repeat lg:bg-top lg:py-32 flex items-center justify-center mix-blend-overlay">
       {/* Grid */}
       <div className="grid box-border mt-[5rem] lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
         <div className="flex flex-col justify-center items-center mt-[100px] lg:col-span-3 bg-gray-700/65 p-8 rounded-lg">

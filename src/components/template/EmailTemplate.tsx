@@ -43,7 +43,7 @@ export const EmailTemplate = ({ userName, companyEmail, location, company, value
               <Img
                 style={headerImage}
                 width={150}
-                src="/logo2.png"
+                src="/logo2.webp"
               />
             </Column>
           </Row>
@@ -123,7 +123,7 @@ export const EmailTemplate = ({ userName, companyEmail, location, company, value
 
         <Hr style={footerDivider} />
 
-        <Img width={100} src="/logo3.png" />
+        <Img width={100} src="/logo3.webp" />
         <Text style={footerAddress}>
           <strong>{company}</strong>, {location.street}, {location.city} <strong>{location.state}</strong> {location.postalCode}
         </Text>
