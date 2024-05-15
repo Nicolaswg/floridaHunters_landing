@@ -98,7 +98,7 @@ export const EmailForm = () => {
     }
   }
   return (
-    <form onSubmit={handleSubmit} className="p-2 flex gap-2 items-center md:flex-wrap lg:flex-row lg:gap-3 md:justify-center">
+    <form onSubmit={handleSubmit} className="p-2 flex sm:flex-wrap gap-2 items-center md:flex-wrap lg:flex-row lg:gap-3 md:justify-center">
       <div className="w-full max-w-lg  lg:w-auto">
         <Label className="sr-only">Name</Label>
         <Input required placeholder="Name" type="text" name="name" ref={nameInputRef} />

@@ -1,92 +1,73 @@
 import React from 'react'
 
 interface FooterProps {
-  title?: string;
-  description?: object;
+  description?: string;
+  socialLinks?: { links: string }[];
+  companyDetails?:
+  {
+    email: string, phone: string, address: string, city: string, state: string, zip: string
+  }
 }
 
-export const Footer = () => {
+export const Footer = ({ description, socialLinks, companyDetails }: FooterProps) => {
   return (
-    <div className="px-4 pt-16 mx-auto">
-      <div className="grid gap-10 row-gap-6 mb-8">
-        <div className="col-span-2">
-          <a href="http://floridahuntersacademy.com/" aria-label="Go home" title="Company" className="inline-flex items-center">
-            <img src="/logo3.png" alt="florida hunters logo" width={80} height={80} />
-            <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">Florida Hunters</span>
-          </a>
-          <div className="mt-6 max-w-sm">
-            <p className="text-sm text-gray-800">
-              Dedication is not just a word; it's a way of life. With an unwavering commitment to developing the best baseball players, our academy leaves no stone unturned in the pursuit of excellence.
-            </p>
-            <p className="mt-4 text-sm text-gray-800">
-              Our team of experienced coaches and trainers work tirelessly, day in and day out, to provide our athletes with the necessary skills, knowledge, and guidance to thrive on and off the field.
-            </p>
+    <footer>
+      <div className="bg-gray-800 py-4 text-gray-400">
+        <div className="container px-4 mx-auto">
+          <div className="-mx-4 flex flex-wrap justify-between">
+            <div className="px-4 my-4 w-full xl:w-1/5">
+              <img src="/logo3.png" alt="florida hunters logo" width={100} height={100} className='m-4' />
+              <p className="text-justify">
+                {description}
+              </p>
+            </div>
+
+            <div className="px-4 my-4 w-full sm:w-auto">
+              <div>
+                <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-green-600">Company</h2>
+              </div>
+              <ul className="leading-8">
+                <li><a href="#" className="hover:text-white">Terms &amp; Conditions</a></li>
+                <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
+                <li><a href="tel:+1(786)836-8901" className="hover:text-white">Contact Us</a></li>
+              </ul>
+            </div>
+            <div className="px-4 my-4 w-full sm:w-auto xl:w-1/5">
+              <div>
+                <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-green-600">Connect With Us</h2>
+              </div>
+              <a target="_blank" href="https://www.facebook.com/301605403033950" className="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-3 hover:text-green-400 hover:border-green-400">
+                <svg className="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                  <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                </svg>
+              </a>
+              <a target="_blank" href="https://x.com/florida_hunters?t=0lKJ6lQ4AzFq0iHk3Fpvcg&s=09" className="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-3 hover:text-green-400 hover:border-green-400">
+                <svg className="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                </svg>
+              </a>
+              <a target="_blank" href="https://www.instagram.com/hunters.bba" className="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-green-400 hover:border-green-400">
+                <svg className="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                </svg>
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="space-y-2 text-sm">
-          <p className="text-base font-bold tracking-wide text-gray-900">Contacts</p>
-          <div className="flex">
-            <p className="mr-1 text-gray-800">Phone:</p>
-            <a href="tel:+1(786) 836-8901" aria-label="Our phone" title="Our phone" className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">+1(786) 836-8901</a>
-          </div>
-          <div className="flex">
-            <p className="mr-1 text-gray-800">Email:</p>
-            <a href="mailto:info@lorem.mail" aria-label="Our email" title="Our email" className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">info@lorem.mail</a>
-          </div>
-          <div className="flex">
-            <p className="mr-1 text-gray-800">Address:</p>
-            <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" aria-label="Our address" title="Our address" className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">
-              312 Lovely Street, NY
-            </a>
-          </div>
-        </div>
-        <div>
-          <span className="text-base font-bold tracking-wide text-gray-900">Social</span>
-          <div className="flex items-center mt-1 space-x-3">
-            <a href="/" className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
-                <path
-                  d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z"
-                ></path>
-              </svg>
-            </a>
-            <a href="/" className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
-              <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
-                <circle cx="15" cy="15" r="4"></circle>
-                <path
-                  d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z"
-                ></path>
-              </svg>
-            </a>
-            <a href="/" className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
-                <path
-                  d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"
-                ></path>
-              </svg>
-            </a>
-          </div>
-          <p className="mt-4 text-sm text-gray-500">
-            Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken spare ribs salami.
-          </p>
         </div>
       </div>
-      <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t">
-        <p className="text-sm text-gray-600">
-          © Copyright 2020 Lorem Inc. All rights reserved.
-        </p>
-        <ul className="flex flex-col mb-3 space-y-2">
-          <li>
-            <a href="/" className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">F.A.Q</a>
-          </li>
-          <li>
-            <a href="/" className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="/" className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Terms &amp; Conditions</a>
-          </li>
-        </ul>
+      <div className="bg-green-800 py-4 text-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="-mx-4 flex flex-wrap justify-between">
+            <div className="px-4 w-full text-center sm:w-auto sm:text-left">
+              Copyright © 2024
+              Florida Hunters. All Rights Reserved.
+            </div>
+            <div className="px-4 w-full text-center sm:w-auto sm:text-left">
+              Made with ⚾️ by <strong>Just404.</strong>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </footer>
   )
 }
