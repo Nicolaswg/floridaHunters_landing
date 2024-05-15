@@ -23,7 +23,7 @@ export const Header = () => {
               </div>
 
               <div className="hidden md:flex items-center space-x-1">
-                <a href="/" className={`flex gap-x-2 sm:text-[18px] sm:truncate lg:text-xl text-base py-5 px-3 text-[#1C2532] hover:text-[#94F7F6] ease-in-out duration-300 ${buttonVariants({ variant: 'link' })}`}>
+                <a target="_blank" href="https://appt.link/meet-with-florida-hunters-L6IdPlQm/web-conference" className={`flex gap-x-2 sm:text-[18px] sm:truncate lg:text-xl text-base py-5 px-3 text-[#1C2532] hover:text-[#94F7F6] ease-in-out duration-300 ${buttonVariants({ variant: 'link' })}`}>
                   <span>Schedule a Meeting</span>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
@@ -43,7 +43,9 @@ export const Header = () => {
                   <DropdownMenuLabel>Features</DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem>
-                    <span className='p-2'>Schedule a Meeting</span>
+                    <a target="_blank" href="https://appt.link/meet-with-florida-hunters-L6IdPlQm/web-conference">
+                      <span className='p-2'>Schedule a Meeting</span>
+                    </a>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                       <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
                     </svg>
