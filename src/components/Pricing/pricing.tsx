@@ -7,9 +7,18 @@ interface PricingProps {
   subTitle: string
   features: string[]
   price: number
+  lessonType: 'Team' | 'Private'
 }
 
-export const Pricing = ({ title, subTitle, features, price }: PricingProps) => {
+export const Pricing = ({ title, subTitle, features, price, lessonType }: PricingProps) => {
+  const handleClick = () => {
+    if (lessonType === 'Team') {
+      window.open('https://appt.link/meet-with-florida-hunters-L6IdPlQm/in-person-meeting', '_blank')
+    } else if (lessonType === 'Private') {
+      window.open('https://appt.link/meet-with-florida-hunters-L6IdPlQm/in-person-meeting', '_blank')
+    }
+  }
+
   return (
     <div className="max-w-xs mx-auto m-2 overflow-hidden bg-white rounded-lg shadow-lg">
       <div className="px-6 py-4 h-[150px]">
@@ -37,6 +46,7 @@ export const Pricing = ({ title, subTitle, features, price }: PricingProps) => {
       <div className="px-6 pt-4 pb-6">
 
         <Button
+          onClick={handleClick}
           className="block w-full px-4 py-2 font-semibold text-center text-white rounded">Take a trial</Button>
       </div>
     </div>
