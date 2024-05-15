@@ -10,14 +10,14 @@ import {
 
 export const Header = () => {
   return (
-    <header className='fixed top-0 w-full z-10 backdrop-blur-md'>
+    <header className='fixed top-0 w-full z-20 backdrop-blur-md'>
       <nav className=" text-white lg:text-lg p-3">
         <div className=" px-4 w-full">
           <div className="flex items-center justify-between">
             <div className="flex w-full justify-between gap-2 space-x-4">
               <div className='flex justify-center items-center gap-x-1 p-1'>
                 <img src="/logo2.png" alt="logo" width={100} />
-                <a href="/" className="flex ml-4 items-center py-5 px-2 text-[#1C2532] font-bebas">
+                <a href="/" className="flex ml-4 items-center py-5 px-2 text-[#1C2532] font-bebas cursor-default">
                   <h4 className="font-bold  ease-in-out duration-500 text-3xl hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#94F7F6] via-[#97F9A5] to-[#9CFE02]">Florida Hounters</h4>
                 </a>
               </div>

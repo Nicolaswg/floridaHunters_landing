@@ -19,7 +19,8 @@ export default function HeroSectionWithEmailInput() {
         pauseOnHover
       />
 
-      <section id="hero" className="flex flex-col w-full h-full  lg:h-screen  bg-gradient-to-b from-black/45  via-black/50 to-black/80 sm:bg-transparent">
+      <section id="hero" className="relative flex flex-col w-full h-full  lg:h-screen   sm:bg-transparent">
+        <div className="absolute top-0 left-0 bg-gradient-to-t from-slate-900  via-slate-800/50 to-slate-200/20 inset-0" />
         <HeroContent />
       </section>
     </>
