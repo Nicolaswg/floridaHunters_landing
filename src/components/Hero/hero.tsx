@@ -1,6 +1,6 @@
 
 
-import { HeroContent } from "@/components/Hero/HeroContent";
+import { HeroContent } from "@/components/Hero/heroContent";
 import { ToastContainer } from 'react-toastify';
 
 export default function HeroSectionWithEmailInput() {

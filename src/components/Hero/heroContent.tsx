@@ -1,5 +1,5 @@
 
-import { Pricing } from "@/components/Pricing/Pricing";
+import { Pricing } from "@/components/Pricing/pricing";
 import { EmailForm } from '@/components/Email/EmailForm';
 
 export const HeroContent = () => {
