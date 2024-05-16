@@ -1,7 +1,14 @@
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea"
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 import { useRef } from "react";
 
@@ -47,9 +54,11 @@ export const ContactForm = () => {
           id="phone"
         />
       </div>
+      <div>
+      </div>
       <div className="w-full max-w-lg  lg:w-auto">
         <Label htmlFor="message">Message (Optional)</Label>
-        <Textarea 
+        <Textarea
           required
           placeholder="eg: I want to be part of Florida Hunters"
           id="message"
