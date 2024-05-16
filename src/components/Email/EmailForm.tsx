@@ -107,7 +107,7 @@ export const EmailForm = () => {
         <Label className="sr-only">Email</Label>
         <Input required placeholder="Email" type="name" name="email" ref={emailInputRef} />
       </div>
-      <Button className="w-min">Get in Touch</Button>
+      <Button className="w-min">Learn More</Button>
     </form>
   )
 }

@@ -13,17 +13,19 @@ import {
   Tailwind,
 } from "@react-email/components";
 
-interface EmailTemplateProps {
+interface EmailTemplateClientProps {
   userName?: string;
-  companyEmail?: string;
   location?: { state: string, street: string, postalCode: string, city: string };
   company?: string;
-  values?: { id: number, title: string, content: string }[];
+  message?: string;
+  clientPhone?: string;
+  clientEmail?: string;
 }
 
+import React from 'react'
 
-export const EmailTemplate = ({ userName, companyEmail, location, company, values }: EmailTemplateProps) => (
-  <Html>
+export const EmailTemplateClient = ({ userName, location, company, message, clientPhone, clientEmail }: EmailTemplateClientProps) => {
+  return (<Html>
     <Head />
     <Preview>Invitation to join {company}</Preview>
     <Tailwind>
@@ -32,48 +34,29 @@ export const EmailTemplate = ({ userName, companyEmail, location, company, value
           <Section style={header}>
             <Row>
               <Column style={headerContent}>
-                <Heading style={headerContentTitle}>
-                  Hi! {userName}
+                <Heading as="h1" style={headerContentTitle}>
+                  <Text className="text-3xl text-white">A message from: {userName}</Text>
                 </Heading>
-                <Text style={headerContentSubtitle}>
-                  Dedication is not just a <span className="text-[#94F7F6] animate-bounce text-3xl">Word</span>
-                </Text>
               </Column>
             </Row>
           </Section>
 
           <Section style={content}>
             <Heading as="h2" style={title}>
-              In pursuit of greatness
+              Message and Q&A:
             </Heading>
             <Text style={paragraph}>
-              At {company}, we believe in nurturing a love for the game while instilling important values such as teamwork, discipline, and sportsmanship. Our experienced coaches are dedicated to providing a safe and supportive environment for your child to develop their skills and reach their full potential.
+              {message}
             </Text>
 
             <Hr style={divider} />
 
-            <Heading as="h2" style={title}>
-              Here are some key details about our academy:
-            </Heading>
-
-            <ul>
-              {values.map((value) => (
-                <li key={value.id} className="list-disc m-6">
-                  <Text style={paragraph}><strong>{value.title}</strong>{value.content}</Text>
-                </li>
-              ))}
-            </ul>
-
-            <Text style={paragraph}>
-              We are confident that your child will thrive and have an unforgettable experience at the Kid Baseball Academy. Join us in shaping the next generation of baseball stars!
-            </Text>
-
-            <Hr style={divider} />
             <Section className="flex w-full justify-center items-start p-4">
               <Text>
-                If you have any questions or concerns, please do not hesitate to reach out to us at:
+                Cliente Data:
                 <strong>
-                  {" "}{companyEmail}
+                  {" "}{clientPhone}
+                  {" "}{clientEmail}
                 </strong>
               </Text>
             </Section>
@@ -95,8 +78,8 @@ export const EmailTemplate = ({ userName, companyEmail, location, company, value
       </Body>
     </Tailwind>
   </Html>
-);
-
+  )
+}
 
 const main = {
   backgroundColor: "#f3f3f5",
@@ -112,10 +95,6 @@ const headerContentTitle = {
   lineHeight: "27px",
 };
 
-const headerContentSubtitle = {
-  color: "#fff",
-  fontSize: "17px",
-};
 
 const title = {
   margin: "15px",
@@ -123,8 +102,7 @@ const title = {
   fontWeight: "bold",
   fontSize: "25px",
   lineHeight: "21px",
-  color: "#0c0d0e",
-
+  color: "#000",
 };
 
 const paragraph = {
@@ -173,6 +151,7 @@ const header = {
 const footerDivider = {
   ...divider,
   borderColor: "#d6d8db",
+  width: "100%",
 };
 
 const footerText = {
