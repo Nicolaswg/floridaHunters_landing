@@ -15,9 +15,9 @@ import { ContactForm } from "@/components/ContactForm/ContactForm";
       <img
         src="/logo.webp"
         alt="florida hunters logo"
-        class=" max-w-[300px] h-auto"
+        class="max-w-[300px] h-auto sm:hidden md:block"
       />
-      <div class="grow flex flex-col gap-4">
+      <div class="grow flex flex-col gap-4 p-2">
         <h2 class="text-3xl font-semibold py-2 border-b-2 border-b-gray-500">
           Florida Hunters Academy.
         </h2>
@@ -32,7 +32,7 @@ import { ContactForm } from "@/components/ContactForm/ContactForm";
       </div>
     </div>
     <div class="">
-      <ContactForm />
+      <ContactForm client:load />
     </div>
   </div>
 </section>

@@ -1,6 +1,6 @@
 ---
 import { Footer } from "@/components/Footer/Footer";
-import { Header } from "@/components/Header/Header";
+import { Header } from "@/components/Header/header";
 
 interface Props {
 	title: string;
@@ -30,11 +30,22 @@ const { title } = Astro.props;
 		<slot />
 		<Footer
 			client:load
-			description="Unleash the future stars of the diamond at our premier baseball academy. Join us today and watch your child's skills soar to new heights. Play, learn, and have a blast with our expert coaches and state-of-the-art facilities. Together, we'll build a strong foundation for a lifelong love of the game. Swing for the fences and be part of our winning team!"
+			description="Join our baseball academy, where passion turns into achievement. We offer professional training and holistic development in a respectful, team-oriented environment. Here, you'll not only enhance your sports skills, but also grow personally. Come and live the experience of being a true player!"
 			socialLinks={[
-				{ links: "https://wa.me/message/CK4DXARS74BFG1" },
-				{ links: "https://www.instagram.com/hunters.bba" },
+				{
+					links: "https://wa.me/message/CK4DXARS74BFG1",
+				},
+				{
+					links: "https://www.instagram.com/hunters.bba",
+				},
+				{
+					links: "https://www.facebook.com/301605403033950",
+				},
+				{
+					links: "https://x.com/florida_hunters?t=0lKJ6lQ4AzFq0iHk3Fpvcg&s=09",
+				},
 			]}
+			address="2231 Fortune Rd, Kissimmee, FL 34744, EE. UU."
 		/>
 	</body>
 </html>
