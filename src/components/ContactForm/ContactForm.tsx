@@ -1,33 +1,61 @@
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea"
 
-import { useRef } from "react"
+import { useRef } from "react";
 
 export const ContactForm = () => {
+  const nameInputRef = useRef<HTMLInputElement>(null);
+  const emailInputRef = useRef<HTMLInputElement>(null);
+  const messageInputRef = useRef<HTMLInputElement>(null);
+  const phoneInputRef = useRef<HTMLInputElement>(null);
+  const subjectInputRef = useRef<HTMLInputElement>(null);
 
-  const nameInputRef = useRef<HTMLInputElement>(null)
-  const emailInputRef = useRef<HTMLInputElement>(null)
-  const messageInputRef = useRef<HTMLInputElement>(null)
-  const phoneInputRef = useRef<HTMLInputElement>(null)
-  const subjectInputRef = useRef<HTMLInputElement>(null)
-
-  const handleSubmit = () => {
-
-  }
+  const handleSubmit = () => {};
 
   return (
-
-    <form onSubmit={handleSubmit} className="p-2 flex sm:flex-wrap gap-2 items-center md:flex-wrap lg:flex-row lg:gap-3 md:justify-center">
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col gap-2"
+    >
+      <h3 className="text-black text-3xl font-semibold py-2">Contact Form</h3>
       <div className="w-full max-w-lg  lg:w-auto">
-        <Label className="sr-only">Name</Label>
-        <Input required placeholder="Name" type="text" name="name" />
+        <Label htmlFor="name">Name</Label>
+        <Input
+          required
+          placeholder="eg: Mary White"
+          type="text"
+          id="name"
+        />
       </div>
       <div className="w-full max-w-lg  lg:w-auto">
-        <Label className="sr-only">Email</Label>
-        <Input required placeholder="Email" type="name" name="email" />
+        <Label htmlFor="email">Email</Label>
+        <Input
+          required
+          placeholder="eg: example@mail.com"
+          type="name"
+          id="email"
+        />
       </div>
-      <Button className="w-min">Get in Touch</Button>
+      <div className="w-full max-w-lg  lg:w-auto">
+        <Label htmlFor="phone">Contact phone</Label>
+        <Input
+          required
+          placeholder="eg: 440 123 4156"
+          type="text"
+          id="phone"
+        />
+      </div>
+      <div className="w-full max-w-lg  lg:w-auto">
+        <Label htmlFor="message">Message (Optional)</Label>
+        <Textarea 
+          required
+          placeholder="eg: I want to be part of Florida Hunters"
+          id="message"
+        />
+      </div>
+      <Button className="w-min">Send Contact</Button>
     </form>
   );
 };

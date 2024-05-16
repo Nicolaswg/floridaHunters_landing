@@ -3,19 +3,19 @@ import HoursBanner from "./HoursBanner.astro";
 import { ContactForm } from "@/components/ContactForm/ContactForm";
 ---
 
-<section class="w-full text-black relative bg-transparent">
+<section class="w-full text-black relative bg-transparent z-0">
   <div
     class="w-full h-full absolute left-0 -z-10 top-0 bg-[url('/baseball-texture.webp')] bg-[length:180px_180px] opacity-15"
   >
   </div>
   <div
-    class="wrapper max-w-6xl mx-auto flex flex-col md:grid grid-cols-3 py-12"
+    class="wrapper bg-transparent max-w-7xl mx-auto flex flex-col gap-x-10 md:grid grid-cols-3 py-12 z-10"
   >
-    <div class="extract md:col-span-2 flex flex-row gap-10">
+    <div class="extract md:col-span-2 flex flex-row gap-10 mb-4 items-start">
       <img
         src="/logo.webp"
         alt="florida hunters logo"
-        class="aspect-square max-w-[300px]"
+        class=" max-w-[300px] h-auto"
       />
       <div class="grow flex flex-col gap-4">
         <h2 class="text-3xl font-semibold py-2 border-b-2 border-b-gray-500">
@@ -31,7 +31,7 @@ import { ContactForm } from "@/components/ContactForm/ContactForm";
         </p>
       </div>
     </div>
-    <div class="md:col-span-3">
+    <div class="">
       <ContactForm />
     </div>
   </div>
