@@ -10,13 +10,13 @@ import {
 
 export const Header = () => {
   return (
-    <header className='fixed top-0 w-full z-10 backdrop-blur-[.2em] bg-gray-900/40'>
+    <header className='fixed top-0 w-full z-20 backdrop-blur-[.2em] bg-gray-900/40'>
       <nav className=" text-white lg:text-lg py-2.5 lg:py-0">
         <div className=" px-6 w-full">
           <div className="flex items-center justify-between">
             <div className="flex w-full lg:justify-between gap-2 space-x-4">
               <div className='flex justify-center items-center gap-x-1 '>
-                <img src="/logo2.webp" alt="logo" className='w-[100px]'/>
+                <img src="/logo2.webp" alt="logo" className='w-[100px]' />
                 <a href="/" className="hidden md:flex ml-4 items-center py-5 px-2 text-white font-bebas">
                   <h4 className="font-bold drop-shadow-2xl shadow-red tracking-wider ease-in-out duration-500 text-2xl lg:text-3xl hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#94F7F6] via-[#97F9A5] to-[#9CFE02] ">Florida Hounters</h4>
                 </a>

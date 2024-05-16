@@ -20,7 +20,7 @@ export default function HeroSectionWithEmailInput() {
       />
 
       <section id="hero" className="relative flex flex-col w-full h-full  lg:h-screen   sm:bg-transparent">
-        <div className="absolute top-0 left-0 bg-gradient-to-t from-slate-900  via-slate-800/50 to-slate-200/20 inset-0" />
+        <div className="absolute top-0 left-0 bg-gradient-to-t from-slate-900/80  via-slate-900/50 to-slate-900/20 inset-0" />
         <HeroContent />
       </section>
     </>
