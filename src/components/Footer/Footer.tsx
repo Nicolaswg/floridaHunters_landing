@@ -13,16 +13,15 @@ export const Footer = ({
 }: FooterProps) => {
   return (
     <footer>
-      <div className="bg-gray-800 px-8 py-10 text-gray-400 flex flex-col md:grid md:grid-cols-3">
-        <div className="md:col-span-2 flex flex-row gap-6">
+      <div className="bg-gray-800 p-6 md:px-8 md:py-10 text-gray-400 flex flex-col md:grid md:grid-cols-3">
+        <div className="md:col-span-3 lg:col-span-2 flex flex-col md:flex-row gap-6">
           <iframe
-            width="520"
-            height="400"
+          className="w-full h-72 md:w-[500px]"
             id="gmap_canvas"
             src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=2231%20Fortune%20Rd,%20Kissimmee%20Florida+(2231%20Fortune%20Rd,%20Kissimmee,%20FL,%C2%A034744)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           ></iframe>
           <div className="grow flex flex-col justify-between">
-            <div>
+            <div className="mb-4">
               <h4 className="text-xl mb-2  text-white font-semibold py-2 border-b border-b-white drop-shadow-2xl shadow-red tracking-wider ease-in-out duration-500  lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#94F7F6] via-[#97F9A5] to-[#9CFE02]">
                 Unleashing the Wild Within.
               </h4>

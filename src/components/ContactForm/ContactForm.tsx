@@ -128,7 +128,7 @@ export const ContactForm = () => {
           ref={messageInputRef}
         />
       </div>
-      <Button className="w-min">Send Contact</Button>
+      <Button className="w-full md:w-min">Send Contact</Button>
     </form>
   );
 };
