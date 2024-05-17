@@ -29,7 +29,7 @@ export const Footer = ({
                 {description}
               </p>
             </div>
-            <div>
+            <div className="mb-4">
               <p>Academy Address</p>
               <a
                 href="https://maps.app.goo.gl/k2iTthqEouszigPA9"
