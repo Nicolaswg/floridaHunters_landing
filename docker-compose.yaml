@@ -1,0 +1,10 @@
+version: '3'
+services:
+  strapi:
+    build: .
+    container_name: landing-hunters
+    restart: unless-stopped
+    volumes:
+      - ./app:/srv/app
+    ports:
+      - '8081:1234'
