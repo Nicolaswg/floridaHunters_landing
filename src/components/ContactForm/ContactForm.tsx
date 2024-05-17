@@ -108,11 +108,10 @@ export const ContactForm = () => {
         <Label htmlFor="phone">Contact phone</Label>
         <Input
           required
-          placeholder="Format: +9 999-999-9999"
+          placeholder="eg: 402 633 54 26"
           type="phone"
           id="phone"
           name="phone"
-          pattern="^\+\d{1,3}\s\d{3}-\d{3}-\d{4}$"
           ref={phoneInputRef}
         />
       </div>
