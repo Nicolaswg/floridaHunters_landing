@@ -6,12 +6,12 @@ export const HeroContent = () => {
   return (
     <div className="w-full h-full p-8 bg-[url(/hero_bg.jpg)] bg-cover bg-center bg-no-repeat lg:bg-top lg:py-32 flex items-center justify-center">
       {/* Grid */}
-      <div className="grid box-border lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center z-10">
-        <div className=" gap-4 mb-2 py-12 flex flex-col justify-center items-center mt-[100px] md:mt-0 lg:col-span-3 bg-gray-700/65 p-8 rounded-lg">
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight sm:text-center lg:text-7xl text-white">
+      <div className="box-border z-10 grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
+        <div className=" gap-4 mb-2 p-8 flex md:py-12 flex-col justify-center items-center mt-[100px] md:mt-0 lg:col-span-3 bg-gray-700/65 rounded-lg">
+          <h1 className="text-4xl font-extrabold tracking-tight text-white scroll-m-20 sm:text-center lg:text-7xl">
             Join the <span className="inline-block animate-bounce duration-1000 text-[#48bd6b]">Hunt</span>
           </h1>
-          <p className=" sm:text-xl lg:text-2xl md:text-center text-white semibold">
+          <p className="text-white sm:text-xl lg:text-2xl md:text-center semibold">
             Offering top-notch training and development for aspiring athletes. Unleash your potential on the diamond with us.
           </p>
           <EmailForm />

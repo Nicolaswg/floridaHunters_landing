@@ -81,30 +81,30 @@ export const ContactForm = () => {
       onSubmit={handleSubmit}
       className="flex flex-col gap-2 p-2"
     >
-      <h3 className="text-black text-3xl font-semibold py-2">Contact Form</h3>
-      <div className="w-full max-w-lg  lg:w-auto">
+      <h3 className="py-2 text-3xl font-semibold text-black">Contact Form</h3>
+      <div className="w-full max-w-lg lg:w-auto">
         <Label htmlFor="name">Name</Label>
         <Input
           required
-          placeholder="ex: Mary White"
+          placeholder="eg: Mary White"
           type="text"
           id="name"
           name="name"
           ref={nameInputRef}
         />
       </div>
-      <div className="w-full max-w-lg  lg:w-auto">
+      <div className="w-full max-w-lg lg:w-auto">
         <Label htmlFor="email">Email</Label>
         <Input
           required
-          placeholder="ex: example@mail.com"
+          placeholder="eg: example@mail.com"
           type="email"
           id="email"
           name="email"
           ref={emailInputRef}
         />
       </div>
-      <div className="w-full max-w-lg  lg:w-auto">
+      <div className="w-full max-w-lg lg:w-auto">
         <Label htmlFor="phone">Contact phone</Label>
         <Input
           required
@@ -118,7 +118,7 @@ export const ContactForm = () => {
       </div>
       <div>
       </div>
-      <div className="w-full max-w-lg  lg:w-auto">
+      <div className="w-full max-w-lg lg:w-auto">
         <Label htmlFor="message">Message</Label>
         <Textarea
           required
