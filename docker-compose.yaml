@@ -7,4 +7,4 @@ services:
     volumes:
       - ./app:/srv/app
     ports:
-      - '8081:1234'
+      - '8081:4321'
