@@ -132,7 +132,7 @@ export const Footer = ({ description, socialLinks, address }: FooterProps) => {
         </div>
       </div>
       <div className="py-4 text-gray-100 bg-green-800">
-        <div className="container px-4 mx-auto">
+        <div className="px-5">
           <div className="flex flex-wrap justify-between -mx-4">
             <div className="w-full px-4 text-center sm:w-auto sm:text-left">
               Copyright © 2024 Florida Hunters. All Rights Reserved.
