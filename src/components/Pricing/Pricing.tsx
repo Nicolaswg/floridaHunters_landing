@@ -6,16 +6,17 @@ interface PricingProps {
   subTitle: string
   features: string[]
   price: number
+  billed: 'hourly' | 'monthly'
   lessonType: 'Team' | 'Private'
 }
 
-export const Pricing = ({ title, subTitle, features, price, lessonType }: PricingProps) => {
+export const Pricing = ({ title, subTitle, features, price, lessonType, billed }: PricingProps) => {
   const handleClick = () => {
     if (lessonType === 'Team') {
       window.open('https://appt.link/meet-with-florida-hunters-L6IdPlQm/in-person-meeting', '_blank')
-    } /* else if (lessonType === 'Private') {
-      window.open('https://appt.link/meet-with-florida-hunters-L6IdPlQm/in-person-meeting', '_blank')
-    } */
+    } else if (lessonType === 'Private') {
+      window.open('https://docs.google.com/forms/d/e/1FAIpQLSedyKi1-gLDlcg8Bf2Gv35WgCH7IGyTt2-PPinGL5BS_gPQYw/viewform?usp=pp_url', '_blank')
+    }
   }
 
   return (
@@ -25,8 +26,8 @@ export const Pricing = ({ title, subTitle, features, price, lessonType }: Pricin
         <p className="text-gray-600">{subTitle}</p>
       </div>
       <div className="px-6 py-4">
-        <div className="text-4xl font-bold text-gray-800">${price}<span className="text-lg text-gray-600">/month</span></div>
-        <p className="text-gray-600">Billed annually</p>
+        <div className="text-4xl font-bold text-gray-800">${price}<span className="text-lg text-gray-600">/{billed}</span></div>
+        {lessonType === 'Private' ? <p className="text-gray-600">50$ - 30min</p> : <p className="text-gray-600">Free Tryout -  45min</p>}
       </div>
       <div className="px-6 py-4">
         <ul className="text-gray-600">
@@ -46,7 +47,7 @@ export const Pricing = ({ title, subTitle, features, price, lessonType }: Pricin
 
         <Button
           onClick={handleClick}
-          className="block w-full px-4 py-2 font-semibold text-center text-white rounded">Take a trial</Button>
+          className="block w-full px-4 py-2 font-semibold text-center text-white rounded">{lessonType === 'Private' ? 'Get Started' : 'Take a trial'}</Button>
       </div>
     </div>
   )

@@ -18,8 +18,8 @@ export const HeroContent = () => {
         </div>
         {/* End Col */}
         <div className="flex flex-wrap lg:col-span-4 lg:mt-0">
-          <Pricing lessonType="Team" title={"Baseball Travel Team"} subTitle="Step up to the plate with our unbeatable pricing options. Enjoy every swing, catch, and home run." features={["30% off First Months", "3 Practice Weekly Field", "Batting Cages"]} price={200} />
-          <Pricing lessonType="Private" title={"Private Lesson"} subTitle="Unlock your full potential at our premier baseball academy. Private lessons tailored to your needs." features={["Medice Ball Training", "Pocket Radar Pitching", "Video Analizy"]} price={70} />
+          <Pricing billed="monthly" lessonType="Team" title={"Baseball Travel Team"} subTitle="Step up to the plate with our unbeatable pricing options. Enjoy every swing, catch, and home run." features={["30% off First Months", "3 Practice Weekly Field", "Batting Cages"]} price={200} />
+          <Pricing billed="hourly" lessonType="Private" title={"Private Lesson"} subTitle="Unlock your full potential at our premier baseball academy. Private lessons tailored to your needs." features={["Medice Ball Training", "Pocket Radar Pitching", "Video Analizy"]} price={85} />
         </div>
         {/* End Col */}
       </div>
