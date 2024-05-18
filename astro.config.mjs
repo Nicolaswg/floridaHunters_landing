@@ -7,11 +7,12 @@ import node from "@astrojs/node";
 // https://astro.build/config
 export default defineConfig({
   trailingSlash: 'always',
+  base: '/lading/',
   integrations: [react(), tailwind({
     applyBaseStyles: false
   })],
   output: "server",
   adapter: node({
     mode: "standalone"
-  })
+  }),
 });
