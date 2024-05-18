@@ -13,9 +13,9 @@ export const Pricing = ({ title, subTitle, features, price, lessonType }: Pricin
   const handleClick = () => {
     if (lessonType === 'Team') {
       window.open('https://appt.link/meet-with-florida-hunters-L6IdPlQm/in-person-meeting', '_blank')
-    } else if (lessonType === 'Private') {
+    } /* else if (lessonType === 'Private') {
       window.open('https://appt.link/meet-with-florida-hunters-L6IdPlQm/in-person-meeting', '_blank')
-    }
+    } */
   }
 
   return (
