@@ -26,8 +26,8 @@ export const Pricing = ({ title, subTitle, features, price, lessonType, billed }
         <p className="text-gray-600">{subTitle}</p>
       </div>
       <div className="px-6 py-4">
-        <div className="text-4xl font-bold text-gray-800">${price}<span className="text-lg text-gray-600">/{billed}</span></div>
-        {lessonType === 'Private' ? <p className="text-gray-600">50$ - 30min</p> : <p className="text-gray-600">Free Tryout -  45min</p>}
+        <div className="text-4xl font-bold text-gray-800">${price}<span className="text-lg text-gray-600"> / {lessonType === 'Private' ? ' 30min' : billed}</span></div>
+        {lessonType === 'Private' ? <p className="text-gray-600">80$ - montly</p> : <p className="text-gray-600">Free Tryout -  45min</p>}
       </div>
       <div className="px-6 py-4">
         <ul className="text-gray-600">
